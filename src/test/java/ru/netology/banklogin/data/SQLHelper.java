@@ -11,8 +11,10 @@ import java.sql.SQLException;
 
 public class SQLHelper {
     private static final QueryRunner QUERY_RUNNER = new QueryRunner();
+
     private SQLHelper() {
     }
+
     private static Connection getConn() throws SQLException {
         return DriverManager.getConnection(System.getProperty("db.url"), "app", "pass");
     }

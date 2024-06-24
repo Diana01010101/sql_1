@@ -17,11 +17,11 @@ public class LoginPage {
         errorNotification.shouldHave(exactText(expectedText)).shouldBe(visible);
     }
 
-    public ru.netology.banklogin.page.VerificationPage validLogin(DataHelper.AuthInfo info) {
+    public VerificationPage validLogin(DataHelper.AuthInfo info) {
         loginField.setValue(info.getLogin());
         passwordField.setValue(info.getPassword());
         loginButton.click();
-        return new ru.netology.banklogin.page.VerificationPage();
+        return new VerificationPage();
 
     }
 
