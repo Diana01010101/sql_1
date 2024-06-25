@@ -13,8 +13,8 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.banklogin.data.SQLHelper.cleanAuthCodes;
 import static ru.netology.banklogin.data.SQLHelper.cleanDatabase;
-public class BankLoginTest {
 
+public class BankLoginTest {
     LoginPage loginPage;
 
     @AfterEach

@@ -6,7 +6,7 @@ import lombok.Value;
 import java.util.Locale;
 
 public class DataHelper {
-    private static final Faker FAKER = new Faker(new Locale("en"));
+    private static final Faker faker = new Faker(new Locale("en"));
 
     private DataHelper() {
     }
@@ -16,12 +16,11 @@ public class DataHelper {
     }
 
     private static String generateRandomLogin() {
-
-        return FAKER.name().username();
+        return faker.name().username();
     }
 
     private static String generateRandomPassword() {
-        return FAKER.internet().password();
+        return faker.internet().password();
     }
 
     public static AuthInfo generateRandomUser() {
@@ -29,7 +28,8 @@ public class DataHelper {
     }
 
     public static VerificationCode generateRandomVerificationCode() {
-        return new VerificationCode(FAKER.numerify("#####"));
+        return new VerificationCode(faker.numerify("######"));
+        //new VerificationCode(faker.numerify("######"));
     }
 
     @Value
@@ -42,6 +42,4 @@ public class DataHelper {
     public static class VerificationCode {
         String code;
     }
-
-
 }

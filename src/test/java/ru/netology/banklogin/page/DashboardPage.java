@@ -1,5 +1,7 @@
 package ru.netology.banklogin.page;
 
+
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
@@ -10,5 +12,6 @@ public class DashboardPage {
     private final SelenideElement heading = $("[data-test-id=dashboard]");
 
     public DashboardPage() {
-        heading.shouldHave(text("Личный кабинет")).shouldBe(visible);}
+        heading.shouldHave(text("Личный кабинет")).shouldBe(visible);
+    }
 }

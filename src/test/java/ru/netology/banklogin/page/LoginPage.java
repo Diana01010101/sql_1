@@ -1,5 +1,6 @@
 package ru.netology.banklogin.page;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.banklogin.data.DataHelper;
 
@@ -24,7 +25,4 @@ public class LoginPage {
         return new VerificationPage();
 
     }
-
-
-
 }
