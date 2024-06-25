@@ -36,14 +36,12 @@ public class DataHelper {
     public static class AuthInfo {
         String login;
         String password;
-
-
-        @Value
-        public static class VerificationCode {
-            String code;
-        }
-
-
     }
+
+    @Value
+    public static class VerificationCode {
+        String code;
+    }
+
 
 }
